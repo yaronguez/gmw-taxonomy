@@ -66,14 +66,9 @@ class GMW_Taxonomy {
     	}*/
     	
     	if ( is_admin() && !defined( 'DOING_AJAX' ) ) {
-    		include( 'includes/admin/gmw-tx-admin.php' );
-            include( 'includes/admin/gmw-tx-db.php' );
+            include_once GMW_TX_PATH . 'includes/admin/gmw-tx-admin.php';
     	} else {
-            include( 'includes/gmw-tx-search-query-class.php' );
-            include( 'includes/gmw-tx-template-functions.php' );
-            include( 'includes/gmw-tx-extend-pt.php' );
-            add_filter('gmw_search_forms_folder', array($this, 'search_forms'),1, 1);
-            add_filter('gmw_search_results_folder', array($this, 'search_results'),1, 1);
+            include_once GMW_TX_PATH . 'includes/public/gmw-tx-public.php';
         }
 
         //registter scripts
@@ -155,42 +150,7 @@ class GMW_Taxonomy {
         //wp_register_script( 'gmw-map', GMW_PS_URL . '/assets/js/map.min.js', array( 'jquery', 'google-maps', 'gmw-js' ), GMW_PS_VERSION, true );
     }
 
-    public function search_forms($folders){
-        if ( GEO_my_WP::gmw_check_addon( 'taxonomies' ) != false ) {
-            $folders['tx'] =  array(
-                'url' => GMW_TX_URL .'/search-forms/',
-                'path' => GMW_TX_PATH .'/search-forms/',
-                'custom'=>'taxonomies/search-forms/'
-            );
-        }
-        return $folders;
-    }
 
-    public function search_results($folders){
-        if ( GEO_my_WP::gmw_check_addon( 'taxonomies' ) != false ) {
-            $folders['tx'] =  array(
-                'url' => GMW_TX_URL .'/search-results/',
-                'path' => GMW_TX_PATH .'/search-results/',
-                'custom'=>'taxonomies/search-results/'
-            );
-        }
-        return $folders;
-    }
-    /**
-     * Include posts classes
-     * @param type $gmw
-     */
-    public function include_posts_locator_functions( $gmw ) {	
-        // include_once( 'posts/includes/gmw-ps-pt-template-functions.php' );
-    }
-
-    /**
-     * Include friends add-on classes
-     * @param type $gmw
-     */
-    public function include_friends_locator_functions( $gmw ) {
-        // include_once( 'friends/includes/gmw-ps-fl-template-functions.php' );
-    }
 
     /**
      * Info window ajax function
@@ -220,11 +180,5 @@ class GMW_Taxonomy {
     }
 }
 
-/**
- *  Premium Settings Instance
- *
- * @since 1.3
- * @return GMW_Premium_Settings Instance
- */
 new GMW_Taxonomy();
 ?>

@@ -1,0 +1,116 @@
+/**
+ * Posts Locator search results stylesheet "clean"
+ */
+	
+.wppl-map-wrapper {	
+	margin-bottom: 10px;
+	clear:both;
+	width:auto;
+}
+
+.gmw-pt-per-page-dropdown {
+	height:25px !important;
+	font-size: 12px;
+	border:1px solid #ccc;
+	margin-left: 15px
+}
+
+.gmw-posts-wrapper .wppl-single-result {
+	padding:15px 10px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 0px;
+	position:relative;
+}
+
+.wppl-single-result .wppl-thumb {
+	border: 1px solid #DDD;
+	padding: 3px;
+	float: left;
+	margin-right: 10px;
+	display: inline;
+	background: #EFEFEF;
+}	
+
+.wppl-single-result .wppl-thumb img {
+	float: left;
+}
+		
+.wppl-single-result .wppl-info {
+	display: inline-block;
+	width:100%;
+	line-height: 17px;
+	margin-top:10px;
+}
+	
+.wppl-info .wppl-info-left {
+	float: left;
+	width: 40%;
+	border-right: 1px dashed #ccc;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+	
+.wppl-info .wppl-info-right {
+	float: left;
+	width: 55%;
+}
+
+.gmw-results-count {
+	background: #fdfdfd;
+	padding:8px 15px;
+	border-bottom:1px solid #ddd;
+	border-top:1px solid #ddd;
+}
+
+.gmw-results-count span {
+	font-size:13px;	
+}
+
+/* pagination */
+.gmw-pt-pagination-wrapper {
+	font-size: 12px;
+	background: #F9F9F9;
+	padding: 8px 0px;
+	display: inline-block;
+	width:100%;
+	min-height: 25px;
+	margin: 3px 0px
+}
+
+.gmw-pt-bottom-pagination-wrapper {
+	border-bottom:1px solid #ddd;
+	border-top:1px solid #ddd;
+}
+
+
+ul.gmw-pagination {
+	float: right;
+	text-align: center;
+	margin:0px;
+	list-style:none;
+	padding:0px;
+}
+
+ul.gmw-pagination li  {
+	text-align:center;
+	display: inline-block;
+	margin:0 0 0 2px;
+}
+
+ul.gmw-pagination li a,
+ul.gmw-pagination li span {
+	padding: 4px 3px;
+	font-size: 12px;
+	text-decoration: none;
+	background: white;
+	border: solid 1px #ddd;
+	display: inline-block;
+	color:#444;
+}
+
+ul.gmw-pagination li a:hover,
+ul.gmw-pagination li span, 
+.gmw-pt-gray-results-wrapper ul.gmw-pagination li span {
+	background:#f5f5f5;
+	border:1px solid #D9D9D9;
+}
