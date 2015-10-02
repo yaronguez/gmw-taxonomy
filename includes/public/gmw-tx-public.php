@@ -24,7 +24,10 @@ class GMW_TX_Public {
      */
     public function init_search_queries(){
         include_once GMW_TX_PATH . 'includes/public/gmw-tx-search-query-class.php';
-        //include_once GMW_TX_PATH . 'includes/public/gmw-pt-tx-search-query-class.php';
+        // The Posts by Taxonomy Search requires the Posts Addon
+        if ( GEO_my_WP::gmw_check_addon( 'posts' ) ) {
+            include_once GMW_TX_PATH . 'includes/public/gmw-pt-tx-search-query-class.php';
+        }
     }
 
     /**
@@ -40,11 +43,15 @@ class GMW_TX_Public {
                 'path' => GMW_TX_PATH .'/search-forms/taxonomies/',
                 'custom'=>'taxonomies/search-forms/taxonomies/'
             );
-            $folders['pt_tx'] =  array(
-                'url' => GMW_TX_URL .'/search-forms/posts_taxonomies/',
-                'path' => GMW_TX_PATH .'/search-forms/posts_taxonomies/',
-                'custom'=>'taxonomies/search-forms/posts_taxonomies/'
-            );
+
+            // The Posts by Taxonomy Search requires the Posts Addon
+            if ( GEO_my_WP::gmw_check_addon( 'posts' ) ) {
+                $folders['pt_tx'] = array(
+                    'url' => GMW_TX_URL . '/search-forms/posts_taxonomies/',
+                    'path' => GMW_TX_PATH . '/search-forms/posts_taxonomies/',
+                    'custom' => 'taxonomies/search-forms/posts_taxonomies/'
+                );
+            }
         }
         return $folders;
     }
@@ -57,11 +64,14 @@ class GMW_TX_Public {
                 'custom'=>'taxonomies/search-results/taxonomies/'
             );
 
-            $folders['pt_tx'] =  array(
-                'url' => GMW_TX_URL .'/search-results/posts_taxonomies/',
-                'path' => GMW_TX_PATH .'/search-results/posts_taxonomies/',
-                'custom'=>'taxonomies/search-results/posts_taxonomies/'
-            );
+            // The Posts by Taxonomy Search requires the Posts Addon
+            if ( GEO_my_WP::gmw_check_addon( 'posts' ) ) {
+                $folders['pt_tx'] = array(
+                    'url' => GMW_TX_URL . '/search-results/posts_taxonomies/',
+                    'path' => GMW_TX_PATH . '/search-results/posts_taxonomies/',
+                    'custom' => 'taxonomies/search-results/posts_taxonomies/'
+                );
+            }
         }
         return $folders;
     }

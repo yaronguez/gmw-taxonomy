@@ -73,11 +73,7 @@ class GMW_Taxonomy {
 
         //registter scripts
         //add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
-    	
-    	//include friends and posts classes
-    	//add_action( 'gmw_pt_shortcode_start', array( $this, 'include_posts_locator_functions' ), 10 );
-    	//add_action( 'gmw_fl_shortcode_start', array( $this, 'include_friends_locator_functions'   ) );
-    	
+
     	//info window ajax
     	//add_action( 'wp_ajax_gmw_ps_display_info_window', 		 array( $this, 'info_window_ajax' ) );
     	//add_action( 'wp_ajax_nopriv_gmw_ps_display_info_window', array( $this, 'info_window_ajax' ) );

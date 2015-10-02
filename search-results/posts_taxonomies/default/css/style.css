@@ -24,7 +24,7 @@
 	position:relative;
 }
 
-.gmw-pt-per-page-dropdown {
+.gmw-pt-tx-per-page-dropdown {
 	height:25px !important;
 	font-size: 12px;
 	border:1px solid #ccc;
@@ -142,7 +142,7 @@
 }
 
 /* pagination */
-.gmw-pt-pagination-wrapper {
+.gmw-pt-tx-pagination-wrapper {
 	font-size: 12px;
 	background: #F9F9F9;
 	padding: 8px 0px;
@@ -152,7 +152,7 @@
 	margin: 3px 0px
 }
 
-.gmw-pt-bottom-pagination-wrapper {
+.gmw-pt-tx-bottom-pagination-wrapper {
 	border-bottom:1px solid #ddd;
 	border-top:1px solid #ddd;
 }

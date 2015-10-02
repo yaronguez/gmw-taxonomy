@@ -1,18 +1,18 @@
 <?php 
 /**
- * Posts Locator "gray" search form template file. 
+ * Posts by Taxonomy Locator "gray" search form template file.
  * 
  * The information on this file will be displayed as the search forms.
  * 
  * The function pass 1 args for you to use:
  * $gmw  - the form being used ( array )
  * 
- * You could but It is not recomemnded to edit this file directly as your changes will be overridden on the next update of the plugin.
+ * You could but It is not recommended to edit this file directly as your changes will be overridden on the next update of the plugin.
  * Instead you can copy-paste this template ( the "gray" folder contains this file and the "css" folder ) 
  * into the theme's or child theme's folder of your site and apply your changes from there. 
  * 
  * The template folder will need to be placed under:
- * your-theme's-or-child-theme's-folder/geo-my-wp/posts/search-forms/
+ * your-theme's-or-child-theme's-folder/geo-my-wp/taxonomies/search-forms/posts_taxonomies/
  * 
  * Once the template folder is in the theme's folder you will be able to choose it when editing the Posts locator form.
  * It will show in the "Search results" dropdown menu as "Custom: gray".
@@ -35,7 +35,7 @@ if  ( !function_exists('gmw_locator_button') && $gmw['search_form']['locator_ico
 ?>
 <?php do_action( 'gmw_before_search_form_template', $gmw ); ?>
 
-<div class="gmw-form-wrapper gmw-form-wrapper<?php echo $gmw['ID']; ?> gmw-pt-form-wrapper gmw-pt-gray-form-wrapper">
+<div class="gmw-form-wrapper gmw-form-wrapper<?php echo $gmw['ID']; ?> gmw-pt-tx-form-wrapper gmw-pt-tx-gray-form-wrapper">
 	
 	<?php do_action( 'gmw_before_search_form', $gmw ); ?>
 	

@@ -1,7 +1,7 @@
 /**
  * Posts Locator search form stylesheet "Horizontal-gray"
  */
-div.gmw-pt-horizontal-gray-form-wrapper {
+div.gmw-pt-tx-horizontal-gray-form-wrapper {
  	background: #f8f8f8;
 	padding:10px 10px 0;
 	border-top:1px solid #ddd;
@@ -9,31 +9,31 @@ div.gmw-pt-horizontal-gray-form-wrapper {
 	margin-bottom: 1px
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper label {
+div.gmw-pt-tx-horizontal-gray-form-wrapper label {
 	text-transform:capitalize;
 	color:#555;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper,
-div.gmw-pt-horizontal-gray-form-wrapper .address-locator-wrapper,
-div.gmw-pt-horizontal-gray-form-wrapper .post-types-wrapper,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-wrapper,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-custom-field-wrapper,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-keywords-field,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-distance-select,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-posts-dropdown {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .address-locator-wrapper,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .post-types-wrapper,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-wrapper,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-custom-field-wrapper,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-keywords-field,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-distance-select,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-posts-dropdown {
 	display:inline-block;
 	margin:0 5px 10px 0px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper input[type="text"], 
-div.gmw-pt-horizontal-gray-form-wrapper select {
+div.gmw-pt-tx-horizontal-gray-form-wrapper input[type="text"], 
+div.gmw-pt-tx-horizontal-gray-form-wrapper select {
     -webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box;    
 	box-sizing: border-box;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper input[type="text"] {
+div.gmw-pt-tx-horizontal-gray-form-wrapper input[type="text"] {
     padding:6px 25px 7px 10px;	
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -45,7 +45,7 @@ div.gmw-pt-horizontal-gray-form-wrapper input[type="text"] {
 	margin:0px;
 } 
  
-div.gmw-pt-horizontal-gray-form-wrapper select {
+div.gmw-pt-tx-horizontal-gray-form-wrapper select {
 	border: 1px solid #ccc;
 	height:28px;
 	font-size: 12px;
@@ -53,11 +53,11 @@ div.gmw-pt-horizontal-gray-form-wrapper select {
 	padding: 4px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-dropdown-taxonomy-wrapper label, 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span:first-child,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-custom-field-wrapper label,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-saf-wrapper label,
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-address-field-wrapper label {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-dropdown-taxonomy-wrapper label, 
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span:first-child,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-custom-field-wrapper label,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-saf-wrapper label,
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-address-field-wrapper label {
 	padding: 5px;
 	background-color: #ABF1D4;
 	font-size: 12px;
@@ -68,23 +68,23 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-address-field-wrapper label {
 	margin-right:3px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper label {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper label {
 	display:none;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper  .gmw-checkbox-taxonomy-wrapper label {
+div.gmw-pt-tx-horizontal-gray-form-wrapper  .gmw-checkbox-taxonomy-wrapper label {
 	display:inline-block;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .address-locator-wrapper {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .address-locator-wrapper {
 	position:relative;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-no-address-error {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-no-address-error {
 	border: 1px solid rgb(252, 165, 165) !important;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper {
 	padding:5px 0;
 	position: absolute;
 	right:2px;
@@ -95,7 +95,7 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper {
 	color:#375348;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper.gmw-form-wrapper .gmw-locator-btn-within-wrapper {
+div.gmw-pt-tx-horizontal-gray-form-wrapper.gmw-form-wrapper .gmw-locator-btn-within-wrapper {
 	cursor: pointer;
 	position: absolute;
 	right:0px;
@@ -105,12 +105,12 @@ div.gmw-pt-horizontal-gray-form-wrapper.gmw-form-wrapper .gmw-locator-btn-within
 	height: initial;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-btn-within {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-btn-within {
 	color: rgb(179, 223, 193);
 	font-size:24px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper img {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper img {
 	-moz-box-shadow:    none;
   	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -118,7 +118,7 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper img {
 	margin-left: 5px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper img.gmw-locator-btn-loader {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper img.gmw-locator-btn-loader {
 	max-height: 17px;
 	margin-left: 3px;
 	padding-top: 5px;
@@ -126,7 +126,7 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper img.gmw-locator
 	top:0;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-button {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-button {
 	padding: 3px 5px;
 	background-color: #ABF1D4;
 	border:1px solid #9BDFC3;
@@ -142,61 +142,61 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-button {
     font-size:12px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-button:hover {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-button:hover {
 	background-color:#72D9AE;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-submit {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-submit {
 	display: inline;
 }
 
 /* premium features */
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper {
     text-align:center;
     display:inline-block;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper input {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper input {
     max-width:60px;
     font-size:14px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range {
 	height: 0.8em;
 	-moz-border-radius: 0px/*{cornerRadius}*/;
 	-webkit-border-radius: 0px/*{cornerRadius}*/;
 	border-radius: 0px/*{cornerRadius}*/;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range a {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range a {
 	height:1.3em;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper {
 	margin-bottom:10px;
 	vertical-align:top;
 	clear:both;
 	display: block
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span {
 	display:block
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper input.gmw-single-checkbox {
+div.gmw-pt-tx-horizontal-gray-form-wrapper input.gmw-single-checkbox {
 	margin-right: 5px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper label {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper label {
 	margin:5px;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span.label {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span.label {
 	font-weight:bold;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper img.gmw-checkbox-cat-icons {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper img.gmw-checkbox-cat-icons {
 	width:22px;
 	height: auto;
 	border-radius: 5px;
@@ -207,55 +207,55 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper img.gmw-c
 	background: #f9f9f9;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span.cb-title {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span.cb-title {
 	display:inline-block;
 	//vertical-align: top;
 }
 
-div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper .category-icon-checked {
+div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper .category-icon-checked {
 	border:1px solid #86c1a9 !important;
 	background: #fff !important;
 }
 
 /* widget */
 
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .address-locator-wrapper,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .post-types-wrapper,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-wrapper,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .gmw-custom-field-wrapper,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .gmw-keywords-field,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper select {
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .address-locator-wrapper,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .post-types-wrapper,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-wrapper,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-custom-field-wrapper,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-keywords-field,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper select {
 	display:block;
 	margin:0 0px 10px 0px;
 }
 
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper {
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper {
  	background: none;
 	padding:0px;
 	border:0;
 }
 
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper input[type="text"], 
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper select,
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper [type="submit"] {
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper input[type="text"], 
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper select,
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper [type="submit"] {
 	width:100%;
 }
 
-.widget_gmw_search_form_widget div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-button {
+.widget_gmw_search_form_widget div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-button {
 	width:100%;
 	padding:10px 0px;
 }
 
 @media (max-width:600px) {
 	
-	div.gmw-pt-horizontal-gray-form-wrapper .address-locator-wrapper,
-	div.gmw-pt-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper,
-	div.gmw-pt-horizontal-gray-form-wrapper .gmw-address-field-wrapper,
-	div.gmw-pt-horizontal-gray-form-wrapper select,
-	div.gmw-pt-horizontal-gray-form-wrapper input[type="text"],
-	div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-wrapper,
-	div.gmw-pt-horizontal-gray-form-wrapper .gmw-submit-button {
+	div.gmw-pt-tx-horizontal-gray-form-wrapper .address-locator-wrapper,
+	div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-single-taxonomy-wrapper,
+	div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-address-field-wrapper,
+	div.gmw-pt-tx-horizontal-gray-form-wrapper select,
+	div.gmw-pt-tx-horizontal-gray-form-wrapper input[type="text"],
+	div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-wrapper,
+	div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-submit-button {
 		width:100% !important;
 		-webkit-box-sizing: border-box; 
 		-moz-box-sizing: border-box;    
@@ -264,7 +264,7 @@ div.gmw-pt-horizontal-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper .category
 		display:block;
 	}
 	
-	div.gmw-pt-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper {
+	div.gmw-pt-tx-horizontal-gray-form-wrapper .gmw-locator-btn-wrapper {
 		bottom:5px;
 		right: 8px;
 	}

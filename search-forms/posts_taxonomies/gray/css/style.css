@@ -1,7 +1,7 @@
 /**
- * Posts Locator search form stylesheet "gray"
+ * Posts by Taxonomy Locator search form stylesheet "gray"
  */
-div.gmw-pt-gray-form-wrapper {
+div.gmw-pt-tx-gray-form-wrapper {
  	background: #f8f8f8;
 	padding:15px;
 	border-top:1px solid #ddd;
@@ -9,17 +9,17 @@ div.gmw-pt-gray-form-wrapper {
 	margin-bottom:1px;
 }
 
-div.gmw-pt-gray-form-wrapper label {
+div.gmw-pt-tx-gray-form-wrapper label {
 	text-transform:capitalize;
 	color:#555;
 }
 
-div.gmw-pt-gray-form-wrapper input[type="text"] {
+div.gmw-pt-tx-gray-form-wrapper input[type="text"] {
      padding:8px 10px 7px;	
 } 
  
-div.gmw-pt-gray-form-wrapper input[type="text"], 
-div.gmw-pt-gray-form-wrapper select {
+div.gmw-pt-tx-gray-form-wrapper input[type="text"], 
+div.gmw-pt-tx-gray-form-wrapper select {
      width:100%;
      margin-bottom:15px;
      -webkit-box-sizing: border-box; 
@@ -27,12 +27,12 @@ div.gmw-pt-gray-form-wrapper select {
 	box-sizing: border-box;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-single-taxonomy-wrapper input[type="text"],
-div.gmw-pt-gray-form-wrapper .gmw-single-taxonomy-wrapper select {
+div.gmw-pt-tx-gray-form-wrapper .gmw-single-taxonomy-wrapper input[type="text"],
+div.gmw-pt-tx-gray-form-wrapper .gmw-single-taxonomy-wrapper select {
 	margin-bottom:0px;
 }
 
-div.gmw-pt-gray-form-wrapper select {
+div.gmw-pt-tx-gray-form-wrapper select {
 	border: 1px solid #ccc;
 	height:30px;
 	font-size: 14px;
@@ -40,11 +40,11 @@ div.gmw-pt-gray-form-wrapper select {
 	//margin-top:5px
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-address-field-wrapper {
+div.gmw-pt-tx-gray-form-wrapper .gmw-address-field-wrapper {
 	position:relative;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-field-label {
+div.gmw-pt-tx-gray-form-wrapper .gmw-field-label {
 	padding: 2px 0px;
 	background-color: #ABF1D4;
 	font-size: 14px;
@@ -56,17 +56,17 @@ div.gmw-pt-gray-form-wrapper .gmw-field-label {
 	margin-bottom:3px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-taxonomies-wrapper {
+div.gmw-pt-tx-gray-form-wrapper .gmw-taxonomies-wrapper {
 	margin-bottom: 20px;
 	border-bottom: 1px solid #e1e1e1;
 	padding-bottom: 10px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-no-address-error {
+div.gmw-pt-tx-gray-form-wrapper .gmw-no-address-error {
 	border: 1px solid rgb(252, 165, 165) !important;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper, div.gmw-pt-gray-form-wrapper .gmw-submit-button {
+div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-wrapper, div.gmw-pt-tx-gray-form-wrapper .gmw-submit-button {
 	padding: 6px 0px;
 	background-color: #ABF1D4;
 	border:1px solid #9BDFC3;
@@ -83,21 +83,21 @@ div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper, div.gmw-pt-gray-form-wrap
     transition: background-color 200ms linear;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper:hover, div.gmw-pt-gray-form-wrapper .gmw-submit-button:hover {
+div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-wrapper:hover, div.gmw-pt-tx-gray-form-wrapper .gmw-submit-button:hover {
 	background-color:#72D9AE;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-submit {
+div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-submit {
 	display: inline;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper img {
+div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-wrapper img {
 	box-shadow: none;
 	max-height: 15px;
 	margin-left: 5px;
 }
 
-div.gmw-form-wrapper.gmw-pt-gray-form-wrapper .gmw-locator-btn-within-wrapper {
+div.gmw-form-wrapper.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-within-wrapper {
 	cursor: pointer;
 	padding:5px 5px;
 	position: absolute;
@@ -109,71 +109,71 @@ div.gmw-form-wrapper.gmw-pt-gray-form-wrapper .gmw-locator-btn-within-wrapper {
 	border: 0px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-locator-btn-within-wrapper:hover {
+div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-within-wrapper:hover {
 	background: none;
 	border: 0px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-btn-within {
+div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-wrapper .gmw-locator-btn-within {
 	color: rgb(179, 223, 193) !important;
 	font-size:24px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-submit {
+div.gmw-pt-tx-gray-form-wrapper .gmw-submit {
 	width:100%;
 }
 
 /* widget */
-.widget_gmw_search_form_widget div.gmw-pt-gray-form-wrapper {
+.widget_gmw_search_form_widget div.gmw-pt-tx-gray-form-wrapper {
  	background: none;
 	padding:0px;
 	border:0;
 }
 
-.widget_gmw_search_form_widget div.gmw-pt-gray-form-wrapper .gmw-locator-btn-wrapper, .widget_gmw_search_form_widget div.gmw-pt-gray-form-wrapper .gmw-submit-button {
+.widget_gmw_search_form_widget div.gmw-pt-tx-gray-form-wrapper .gmw-locator-btn-wrapper, .widget_gmw_search_form_widget div.gmw-pt-tx-gray-form-wrapper .gmw-submit-button {
 	padding: 9px 0px;
 }
 
 /* premium features */
 
-div.gmw-pt-gray-form-wrapper .gmw-radius-slider-wrapper {
+div.gmw-pt-tx-gray-form-wrapper .gmw-radius-slider-wrapper {
     margin-bottom:10px;
     text-align:center;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-radius-slider-wrapper label {
+div.gmw-pt-tx-gray-form-wrapper .gmw-radius-slider-wrapper label {
     max-width: 52px;
 	text-align: left;
 	background: none;
 	border: 0px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-radius-slider-wrapper input {
+div.gmw-pt-tx-gray-form-wrapper .gmw-radius-slider-wrapper input {
     max-width:60px;
     font-size:14px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range {
+div.gmw-pt-tx-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range {
 	height: 0.8em;
 	-moz-border-radius: 0px/*{cornerRadius}*/;
 	-webkit-border-radius: 0px/*{cornerRadius}*/;
 	border-radius: 0px/*{cornerRadius}*/;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range a {
+div.gmw-pt-tx-gray-form-wrapper .gmw-radius-slider-wrapper .gmw-slider-range a {
 	height:1.3em;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-single-taxonomy-wrapper {
+div.gmw-pt-tx-gray-form-wrapper .gmw-single-taxonomy-wrapper {
 	margin-bottom:15px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul {
 	margin:0px;
 	padding:0px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul.gmw-checkbox-level-top {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul.gmw-checkbox-level-top {
 	margin:-5px 0px 10px 0px;
 	max-height: 140px;
 	background: white;
@@ -182,17 +182,17 @@ div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul.gmw-checkbox-leve
 	overflow-y: scroll;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul.gmw-checkbox-children {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul.gmw-checkbox-children {
 	padding-left:12px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper li {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper li {
 	list-style:none;
 	padding:0px;
 	margin:2px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li label {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li label {
 	display:inline-block;
 	font-size: 13px;
 	margin:0px;
@@ -201,15 +201,15 @@ div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li label {
 	line-height: 24px;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper span {
 	display:inline-block;
 }
 
-div.gmw-pt-gray-form-wrapper input.gmw-single-checkbox {
+div.gmw-pt-tx-gray-form-wrapper input.gmw-single-checkbox {
 	margin-right: 5px;	
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li.gmw-checkbox-wrapper img.category-icon {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li.gmw-checkbox-wrapper img.category-icon {
 	vertical-align: top;
 	max-height: 18px;
 	box-shadow: none;
@@ -218,10 +218,10 @@ div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li.gmw-checkbox-w
 	cursor: pointer;
 }
 
-div.gmw-pt-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li.gmw-checkbox-wrapper img.category-icon.checked {
+div.gmw-pt-tx-gray-form-wrapper .gmw-checkbox-taxonomy-wrapper ul li.gmw-checkbox-wrapper img.category-icon.checked {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-div.gmw-pt-gray-form-wrapper ul.chosen-choices {
+div.gmw-pt-tx-gray-form-wrapper ul.chosen-choices {
 	padding:2px;
 }

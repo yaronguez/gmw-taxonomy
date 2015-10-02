@@ -27,6 +27,7 @@ class GMW_PT_TX_Form {
         add_action( 'gmw_posts_taxonomies_form_settings_featured_image',      array( $this, 'featured_image' 			), 1, 4 );
         add_action( 'gmw_posts_taxonomies_form_settings_show_excerpt',    	   array( $this, 'show_excerpt' 			), 1, 4 );
         add_action( 'gmw_posts_taxonomies_form_settings_form_taxonomies', 	   array( $this, 'form_taxonomies' 			), 1, 4 );
+        add_action( 'gmw_posts_taxonomies_form_settings_address_field',   'GMW_Edit_Form::form_settings_address_field' , 10, 4 );
 
         // Include search-forms and results-forms locations in the new form settings
         add_filter('gmw_admin_search_forms_folder', array($this, 'search_forms_folder'), 1, 1);
@@ -60,6 +61,7 @@ class GMW_PT_TX_Form {
      * @return $settings
      */
     function form_settings_init( $settings ) {
+        unset($settings['results_map']);
 
         //page laod features
         $newValues = array(
@@ -76,6 +78,8 @@ class GMW_PT_TX_Form {
 
         $afterIndex = 0;
         $settings['page_load_results'][1] = array_merge( array_slice( $settings['page_load_results'][1], 0, $afterIndex + 1 ), $newValues, array_slice( $settings['page_load_results'][1], $afterIndex + 1 ) );
+        unset($settings['page_load_results'][1]['display_map']);
+
 
         //search form features
         $newValues = array(
@@ -100,6 +104,7 @@ class GMW_PT_TX_Form {
         $afterIndex = 0;
         $settings['search_form'][1] = array_merge( array_slice( $settings['search_form'][1], 0, $afterIndex + 1 ), $newValues, array_slice( $settings['search_form'][1], $afterIndex + 1 ) );
 
+
         //search results features
         unset( $settings['search_results'][1]['auto_results'], $settings['search_results'][1]['auto_all_results'] );
         $newValues = array(
@@ -119,27 +124,6 @@ class GMW_PT_TX_Form {
                 'cb_label' => '',
                 'desc'     => __( 'Display featured image and define its width and height in pixels.', 'GMW' ),
                 'type'     => 'function',
-            ),
-            'additional_info'  => array(
-                'name'    => 'additional_info',
-                'std'     => '',
-                'label'   => __( 'Contact Information', 'GMW' ),
-                'desc'    => __( "Check the checkboxes of the contact information which you'd like to display per location in the search results.", 'GMW' ),
-                'type'    => 'multicheckbox',
-                'options' => array(
-                    'phone'   => __( 'Phone', 'GMW' ),
-                    'fax'     => __( 'Fax', 'GMW' ),
-                    'email'   => __( 'Email', 'GMW' ),
-                    'website' => __( 'Website', 'GMW' ),
-                ),
-            ),
-            'opening_hours'  => array(
-                'name'     => 'opening_hours',
-                'std'      => '',
-                'label'    => __( 'Show opening hours', 'GMW' ),
-                'cb_label' => __( 'Yes', 'GMW' ),
-                'desc'     => __( 'Display opening days & hours.', 'GMW' ),
-                'type'     => 'checkbox'
             ),
             'show_excerpt'     => array(
                 'name'     => 'show_excerpt',
@@ -162,6 +146,10 @@ class GMW_PT_TX_Form {
 
         $afterIndex = 3;
         $settings['search_results'][1] = array_merge( array_slice( $settings['search_results'][1], 0, $afterIndex + 1 ), $newValues, array_slice( $settings['search_results'][1], $afterIndex + 1 ) );
+        unset($settings['search_results'][1]['display_posts']);
+        unset($settings['search_results'][1]['display_map']);
+        unset($settings['search_results'][1]['by_driving']);
+        unset($settings['search_results'][1]['get_directions']);
 
         return $settings;
     }

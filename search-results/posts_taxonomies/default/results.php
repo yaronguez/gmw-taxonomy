@@ -1,6 +1,6 @@
 <?php
 /**
- * Posts locator "default" search results template file. 
+ * Posts by Taxonomy locator "default" search results template file. 
  * 
  * The information on this file will be displayed as the search results.
  * 
@@ -8,19 +8,19 @@
  * $gmw  - the form being used ( array )
  * $post - each post in the loop
  * 
- * You could but It is not recomemnded to edit this file directly as your changes will be overridden on the next update of the plugin.
+ * You could but It is not recommended to edit this file directly as your changes will be overridden on the next update of the plugin.
  * Instead you can copy-paste this template ( the "default" folder contains this file and the "css" folder ) 
  * into the theme's or child theme's folder of your site and apply your changes from there. 
  * 
  * The template folder will need to be placed under:
- * your-theme's-or-child-theme's-folder/geo-my-wp/posts/search-results/
+ * your-theme's-or-child-theme's-folder/geo-my-wp/taxonomies/search-results/posts_taxonomies/
  * 
  * Once the template folder is in the theme's folder you will be able to choose it when editing the posts locator form.
  * It will show in the "Search results" dropdown menu as "Custom: default".
  */
 ?>
 <!--  Main results wrapper - wraps the paginations, map and results -->
-<div class="gmw-results-wrapper gmw-results-wrapper-<?php echo $gmw['ID']; ?> gmw-pt-default-results-wrapper">
+<div class="gmw-results-wrapper gmw-results-wrapper-<?php echo $gmw['ID']; ?> gmw-pt-tx-default-results-wrapper">
 	
 	<?php do_action( 'gmw_search_results_start' , $gmw, $post ); ?>
 	
@@ -31,7 +31,7 @@
 	
 	<?php do_action( 'gmw_search_results_before_top_pagination' , $gmw, $post ); ?>
 	
-	<div class="gmw-pt-pagination-wrapper gmw-pt-top-pagination-wrapper">
+	<div class="gmw-pt-tx-pagination-wrapper gmw-pt-tx-top-pagination-wrapper">
 		<!--  paginations -->
 		<?php gmw_per_page( $gmw, $gmw['total_results'], 'paged' ); ?><?php gmw_pagination( $gmw, 'paged', $gmw['max_pages'] ); ?>
 	</div> 
@@ -164,7 +164,7 @@
 	
 	<?php do_action( 'gmw_search_results_before_bottom_pagination' , $gmw, $post ); ?>
 	
-    <div class="gmw-pt-pagination-wrapper gmw-pt-bottom-pagination-wrapper">
+    <div class="gmw-pt-tx-pagination-wrapper gmw-pt-tx-bottom-pagination-wrapper">
         <!--  paginations -->
         <?php gmw_per_page( $gmw, $gmw['total_results'], 'paged' ); ?><?php gmw_pagination( $gmw, 'paged', $gmw['max_pages'] ); ?>
     </div> 
