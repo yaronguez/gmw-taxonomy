@@ -16,4 +16,4 @@ Create a Posts by Taxonomy Locator form under the GEO my WP Forms admin page and
 This plugin uses the [GitHub Updater](https://github.com/afragen/github-updater) updater for updates.  If you'd like to keep the plugin updated, [download and install the latest tagged release](https://github.com/afragen/github-updater/releases).
 
 ## Support
-Extremely limited. I'm [involved](https://www.crypteron.com) [in](http://www.meetup.com/Advanced-WordPress/) [a lot](http://www.trestian.com) [of](http://rotby.com) [projects](http://royalheartmusic.com)[!](https://www.facebook.com/achordingtousimprov)  Pull requests welcome :-)
+Extremely limited. I'm [involved](https://www.crypteron.com) [in](http://www.meetup.com/Advanced-WordPress/) [a](http://www.trestian.com) [lot]((https://www.facebook.com/achordingtousimprov) [of](http://rotby.com) [projects](http://royalheartmusic.com)!  Pull requests welcome :-)
