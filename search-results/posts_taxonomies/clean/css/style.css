@@ -1,11 +1,8 @@
 /**
  * Posts Locator search results stylesheet "clean"
  */
-	
-.wppl-map-wrapper {	
-	margin-bottom: 10px;
-	clear:both;
-	width:auto;
+.wppl-closest-taxonomy-label, .wppl-num-taxonomies-label{
+    font-weight: bold;
 }
 
 .gmw-pt-tx-per-page-dropdown {

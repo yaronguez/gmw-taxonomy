@@ -28,6 +28,7 @@ class GMW_PT_TX_Form {
         add_action( 'gmw_posts_taxonomies_form_settings_show_excerpt',    	   array( $this, 'show_excerpt' 			), 1, 4 );
         add_action( 'gmw_posts_taxonomies_form_settings_form_taxonomies', 	   array( $this, 'form_taxonomies' 			), 1, 4 );
         add_action( 'gmw_posts_taxonomies_form_settings_address_field',   'GMW_Edit_Form::form_settings_address_field' , 10, 4 );
+        add_action( 'gmw_posts_taxonomies_form_settings_taxonomies_address', array( $this, 'form_settings_taxonomies_address' ), 1, 4 );
 
         // Include search-forms and results-forms locations in the new form settings
         add_filter('gmw_admin_search_forms_folder', array($this, 'search_forms_folder'), 1, 1);
@@ -63,7 +64,7 @@ class GMW_PT_TX_Form {
     function form_settings_init( $settings ) {
         unset($settings['results_map']);
 
-        //page laod features
+        //page load features
         $newValues = array(
 
             'post_types'     => array(
@@ -91,14 +92,21 @@ class GMW_PT_TX_Form {
                 'desc'     		=> __( "Check the checkboxes of the post types you'd like to display in the search form. When selecting multiple post types they will be displayed as a dropdown menu.", 'GMW' ),
                 'type'     		=> 'function',
             ),
-
+            'taxonomies_address' => array(
+                'name'     		=> 'taxonomies_address',
+                'std'      		=> '',
+                'label'    		=> __( 'Taxonomy With Address', 'GMW' ),
+                'cb_label' 		=> '',
+                'desc'     		=> __( "Check the checkboxes of the taxonomies who's address you'd like to search.", 'GMW' ),
+                'type'     		=> 'function',
+            ),
             'form_taxonomies' => array(
                 'name'  => 'form_taxonomies',
                 'std'   => '',
                 'label' => __( 'Taxonomies', 'GMW' ),
                 'desc'  => __( "Choose the taxonomies that you'd like to display in the search form. The taxonomies will be displayed as a dropdown menues.", 'GMW' ),
                 'type'  => 'function'
-            )
+            ),
         );
 
         $afterIndex = 0;
@@ -141,7 +149,22 @@ class GMW_PT_TX_Form {
                 'desc'     => __( 'Display a list of taxonomies attached to each post in the list of results.', 'GMW' ),
                 'type'     => 'checkbox'
             ),
-
+            'closest_taxonomy_label' => array(
+                'name'      => 'closest_taxonomy_label',
+                'std'       => '',
+                'label'     => __('Closest Taxonomy Label', 'GMW'),
+                'desc'      => __('What label should be used when displaying the closest taxonomy?'),
+                'placeholder' => __( 'e.g. Closest Vendor', 'GMW' ),
+                'attributes'  => array( 'size' => '25' )
+            ),
+            'number_of_taxonomies_label' => array(
+                'name'      => 'number_of_taxonomies_label',
+                'std'       => '',
+                'label'     => __('Number of Taxonomies Label', 'GMW'),
+                'desc'      => __('What label should be used when displaying the number of taxonomies?'),
+                'placeholder' => __( 'e.g. Number of Vendors', 'GMW' ),
+                'attributes'  => array( 'size' => '25' )
+            )
         );
 
         $afterIndex = 3;
@@ -300,6 +323,21 @@ class GMW_PT_TX_Form {
             );
         }
         return $folder;
+    }
+
+    public function form_settings_taxonomies_address( $gmw_forms, $formID, $section, $option ) {
+        $saved_data = ( isset( $gmw_forms[$formID][$section]['taxonomies_address'] ) ) ? $gmw_forms[$formID][$section]['taxonomies_address'] : array();
+        ?>
+        <div class="posts-checkboxes-wrapper" id="<?php echo $formID; ?>">
+            <?php foreach ( get_taxonomies(array(),'objects') as $taxonomy ) { ?>
+                <?php $checked = ( isset( $saved_data ) && !empty( $saved_data ) && in_array( $taxonomy->name, $saved_data ) ) ? ' checked="checked"' : ''; ?>
+                <p>
+                    <label><input type="checkbox" name="<?php echo 'gmw_forms[' . $_GET['formID'] . '][' . $section . '][taxonomies_address][]'; ?>" value="<?php echo $taxonomy->name; ?>" id="<?php echo $taxonomy->name; ?>" class="post-types-tax-address" <?php echo $checked; ?> />
+                        <?php echo $taxonomy->labels->name . ' ( '. $taxonomy->name .' ) '; ?></label>
+                </p>
+            <?php } ?>
+        </div>
+    <?php
     }
 }
 new GMW_PT_TX_Form();

@@ -265,6 +265,7 @@ class GMW_TX_Form {
         unset( $settings['search_results'][1]['auto_results'], $settings['search_results'][1]['auto_all_results'] );
         $newValues = array(
 
+
             'display_taxonomy_terms'    => array(
                 'name'     => 'display_taxonomy_terms',
                 'std'      => '',

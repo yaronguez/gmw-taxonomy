@@ -23,14 +23,13 @@ class GMW_PT_TX_Search_Query extends GMW {
         if ( !empty( $this->form['org_address'] ) ) {
 
             $clauses['join'] .= " INNER JOIN $wpdb->term_relationships gtr ON $wpdb->posts.ID = gtr.object_id ";
-            if (isset($this->form['params']['taxonomy'])) {
-                $clauses['join'] .= $wpdb->prepare(" INNER JOIN $wpdb->term_taxonomy gtt ON gtr.term_taxonomy_id = gtt.term_taxonomy_id AND gtt.taxonomy = %s", $this->form['params']['taxonomy']);
-            }
+            $clauses['join'] .= " INNER JOIN $wpdb->term_taxonomy gtt ON gtr.term_taxonomy_id = gtt.term_taxonomy_id";
             $clauses['join'] .= " INNER JOIN {$wpdb->prefix}taxonomy_locator gmwlocations ON gtr.term_taxonomy_id = gmwlocations.term_taxonomy_id ";
-            $clauses['fields'] .= $wpdb->prepare(", MIN(ROUND( %d * acos( cos( radians( %s ) ) * cos( radians( gmwlocations.lat ) ) * cos( radians( gmwlocations.long ) - radians( %s ) ) + sin( radians( %s ) ) * sin( radians( gmwlocations.lat) ) ),1 )) AS distance",
+            $clauses['fields'] .= $wpdb->prepare(", COUNT(gmwlocations.term_taxonomy_id) as num_taxonomies, MIN(ROUND( %d * acos( cos( radians( %s ) ) * cos( radians( gmwlocations.lat ) ) * cos( radians( gmwlocations.long ) - radians( %s ) ) + sin( radians( %s ) ) * sin( radians( gmwlocations.lat) ) ),1 )) AS distance",
                 array($this->form['units_array']['radius'], $this->form['your_lat'], $this->form['your_lng'], $this->form['your_lat']));
 
             $clauses['where'] .= " AND ( gmwlocations.lat != 0.000000 && gmwlocations.long != 0.000000 ) ";
+            $clauses['where'] .= $wpdb->prepare( " AND gtt.taxonomy IN (".str_repeat( "%s,", count( $this->form['search_form']['taxonomies_address'] ) - 1 ) . "%s )", $this->form['search_form']['taxonomies_address'] );
             $clauses['having'] = $wpdb->prepare(" distance <= %d OR distance IS NULL", $this->form['radius']);
             $clauses['orderby'] = 'distance';
             $clauses['groupby'] = $wpdb->prefix . 'posts.ID';
@@ -182,12 +181,16 @@ class GMW_PT_TX_Search_Query extends GMW {
         /* remove filter */
         remove_filter( 'posts_clauses', array( $this, 'query_clauses' ) );
 
-        d($gmw_query->request);
         $this->form['results'] 	     = $gmw_query->posts;
         $this->form['results_count'] = count( $gmw_query->posts );
         $this->form['total_results'] = $gmw_query->found_posts;
         $this->form['max_pages']     = $gmw_query->max_num_pages;
-	        
+        $this->form['closest_taxonomy_label'] = (!empty($this->form['search_results']['closest_taxonomy_label'])) ? $this->form['search_results']['closest_taxonomy_label'] : 'Closest';
+        $this->form['closest_taxonomy_label'] = apply_filters('gmw_pt_tx_closest_taxonomy_label',$this->form['closest_taxonomy_label'], $this->form, $this->settings );
+        $this->form['closest_taxonomy_label'] = apply_filters("gmw_pt_tx_closest_taxonomy_label_{$this->form['ID']}",$this->form['closest_taxonomy_label'], $this->form, $this->settings );
+        $this->form['number_of_taxonomies_label'] = (!empty($this->form['search_results']['number_of_taxonomies_label'])) ? $this->form['search_results']['number_of_taxonomies_label'] : 'Number';
+        $this->form['number_of_taxonomies_label'] = apply_filters('gmw_pt_tx_number_of_taxonomies_label',$this->form['number_of_taxonomies_label'], $this->form, $this->settings );
+        $this->form['number_of_taxonomies_label'] = apply_filters("gmw_pt_tx_number_of_taxonomies_label_{$this->form['ID']}",$this->form['number_of_taxonomies_label'], $this->form, $this->settings );
 
                 
         //Modify the form values before the loop

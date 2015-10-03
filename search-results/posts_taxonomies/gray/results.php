@@ -21,7 +21,7 @@
 ?>
 <!--  Main results wrapper - wraps the paginations, map and results -->
 <div class="gmw-results-wrapper gmw-results-wrapper-<?php echo $gmw['ID']; ?> gmw-pt-gray-results-wrapper">
-	
+
 	<?php do_action( 'gmw_search_results_start' , $gmw ); ?>
 	
 	<!-- results count -->
@@ -35,13 +35,7 @@
 	<div class="pagination-per-page-wrapper top">		
 		<?php gmw_per_page( $gmw, $gmw['total_results'], 'paged' ); ?><?php gmw_pagination( $gmw, 'paged', $gmw['max_pages'] ); ?>
 	</div> 
-	
-	 <!-- GEO my WP Map -->
-    <?php 
-    if ( $gmw['search_results']['display_map'] == 'results' ) {
-        gmw_results_map( $gmw );
-    }
-    ?>
+
 		
 	<?php do_action( 'gmw_search_results_before_loop' , $gmw ); ?>
 	
@@ -62,14 +56,8 @@
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php the_title(); ?> 
 						</a>
+                        <?php do_action('gmw_search_results_after_title', $gmw, $post); ?>
 					</h2>
-					<span class="radius"><?php gmw_distance_to_location( $post, $gmw ); ?></span>
-					
-					<div class="address-wrapper">
-				    	<span class="fa fa-map-marker address-icon"></span>
-				    	<span class="address"><?php gmw_location_address( $post, $gmw ); ?></span>
-				    </div>
-					
 				</div>
 
 				<?php do_action( 'gmw_posts_loop_before_content' , $gmw, $post ); ?>
@@ -99,44 +87,16 @@
 					</div>
 					
 					<div class="right-col">
-						<?php if ( !empty( $gmw['search_results']['additional_info'] ) ) { ?>
-    
-					    	<?php do_action( 'gmw_search_results_before_contact_info', $post, $gmw ); ?>
-						   	
-						   	<div class="contact-info">
-								<h4><?php echo $gmw['labels']['search_results']['contact_info']['contact_info']; ?></h4>
-					    		<?php gmw_additional_info( $post, $gmw, $gmw['search_results']['additional_info'], $gmw['labels']['search_results']['contact_info'], 'div' ); ?>
-					    	</div>
-
-					    <?php } ?>
-
-					    <?php if ( !empty( $gmw['search_results']['opening_hours'] ) ) { ?>
-    
-					    	<?php do_action( 'gmw_search_results_before_opening_hours', $post, $gmw ); ?>
-						   	
-					    	<div class="opening-hours">
-					    		<?php gmw_pt_days_hours( $post, $gmw ); ?>
-					    	</div>
-					    <?php } ?>
-		   			</div>
+                        <div class="closest-taxonomy">
+                            <span class="wppl-closest-taxonomy-label"><?php echo $gmw['closest_taxonomy_label']?>:</span>
+                            <span class="wppl-closest-taxonomy"><?php gmw_distance_to_location( $post, $gmw ); ?></span>
+                        </div>
+                        <div class="num-taxonomies">
+                            <span class="wppl-num-taxonomies-label"><?php echo $gmw['number_of_taxonomies_label']?>:</span>
+                            <span class="wpppl-num-taxonomies"><?php echo $post->num_taxonomies ?></span>
+                        </div>
+                    </div>
 	   			</div>
-	   						
-    			<!-- Get directions -->	 	
-				<?php if ( isset( $gmw['search_results']['get_directions'] ) ) { ?>
-					
-					<?php do_action( 'gmw_posts_loop_before_get_directions' , $gmw, $post ); ?>
-					
-					<div class="get-directions-link">
-    					<?php gmw_directions_link( $post, $gmw, false ); ?>
-    				</div>
-    			<?php } ?>
-    			
-				<!--  Driving Distance -->
-				<?php if ( isset( $gmw['search_results']['by_driving'] ) ) { ?>
-    				<?php gmw_driving_distance( $post, $gmw, false ); ?>
-    			<?php } ?>
-    			
-    			<?php do_action( 'gmw_search_results_loop_item_end' , $gmw, $post ); ?>
 				
 			</li><!-- #post -->
 		
