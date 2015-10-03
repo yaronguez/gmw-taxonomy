@@ -12,6 +12,8 @@ Text Domain: GMW-TX
 Domain Path: /languages/
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+GitHub Plugin URI: https://github.com/yaronguez/gmw-taxonomy
+GitHub Branch: master
 */
 
 // Exit if accessed directly
