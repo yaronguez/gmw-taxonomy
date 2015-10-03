@@ -19,4 +19,4 @@ This plugin ~uses~ will use (can't get it working just yet!) the [GitHub Updater
 Extremely limited. I'm [involved](https://www.crypteron.com) [in](http://www.meetup.com/Advanced-WordPress/) [a](http://www.trestian.com) [lot](https://www.facebook.com/achordingtousimprov) [of](http://rotby.com) [projects](http://royalheartmusic.com)!  Pull requests welcome :-)
 
 ## Disclaimer
-Geo My WordPress was created by Eyal Fitoussi.  This GMW Taxonomy plugin merely extends that one as an addon.  Eyal was very helpful in this plugin's development.
+Geo My WordPress was created by [Eyal Fitoussi](https://geomywp.com/).  This GMW Taxonomy plugin merely extends that one as an addon.  Eyal was very helpful in this plugin's development.
