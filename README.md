@@ -13,7 +13,7 @@ Create a Posts by Taxonomy Locator form under the GEO my WP Forms admin page and
 **NOTE:** for performance reasons, when using the Posts by Taxonomy Locator form, the details about the closest taxonomy term, such as name, address, etc, are NOT shown displayed.  No map is displayed either. Only the distance to the closest taxonomy term and the number of taxonomy terms matching the search are displayed.  I may add this feature in the future as an optional setting.
 
 ## Updates
-This plugin ~uses~ will use (can't get it working just yet!) the [GitHub Updater](https://github.com/afragen/github-updater) updater for updates.  If you'd like to keep the plugin updated, [download and install the latest tagged release](https://github.com/afragen/github-updater/releases).
+This plugin uses the [GitHub Updater](https://github.com/afragen/github-updater) updater for updates.  If you'd like to keep the plugin updated, [download and install the latest tagged release](https://github.com/afragen/github-updater/releases).
 
 ## Support
 Extremely limited. I'm [involved](https://www.crypteron.com) [in](http://www.meetup.com/Advanced-WordPress/) [a](http://www.trestian.com) [lot](https://www.facebook.com/achordingtousimprov) [of](http://rotby.com) [projects](http://royalheartmusic.com)!  Pull requests welcome :-)
