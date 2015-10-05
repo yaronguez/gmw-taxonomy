@@ -116,7 +116,6 @@ class GMW_TX_Search_Query extends GMW {
             unset( $clauses['having'] );
         } 
 
-        d($clauses);
         return $clauses; 
     }
 
@@ -180,7 +179,6 @@ class GMW_TX_Search_Query extends GMW {
      * @access public
      */
     public function results() {
-        d($this->form);
 
     	//get the taxonomies
         if ( $this->form['page_load_results_trigger'] ) {
@@ -242,7 +240,6 @@ class GMW_TX_Search_Query extends GMW {
 
         $request = "{$clauses['select']} DISTINCT {$clauses['fields']} FROM {$clauses['from']} {$clauses['join']} WHERE 1=1 {$clauses['where']} {$clauses['groupby']} {$clauses['orderby']} {$clauses['limits']}";
 
-        d($request);
         $this->form['results']       = $wpdb->get_results( $request );
         $foundRows 					 = $wpdb->get_row( "SELECT FOUND_ROWS()", ARRAY_A );
         $this->form['results_count'] = count( $this->form['results'] );
