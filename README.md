@@ -1,7 +1,7 @@
 # Geo My WordPress - Taxonomy Locator Addon
 
 ## Overview
-This is an addon for the [Geo My WordPress plugin](https://wordpress.org/plugins/geo-my-wp/) that adds geo location support for taxonomies. Using this plugin you can add geo location data to taxonomies and then search for taxonomies by address.  You can also filter taxonomy search results by post ID so a user can search for taxonomies attached to a specific post.  The plugin also allows you to search for posts by location using the geo location data of the post's taxonomy terms.  This plugin is under active development.
+This is an addon for the [Geo My WordPress plugin](https://wordpress.org/plugins/geo-my-wp/) that adds geo location support for taxonomies. Using this plugin you can add geo location data to taxonomies and then search for taxonomies by address.  You can also filter taxonomy search results by post ID so a user can search for taxonomies attached to a specific post.  The plugin also allows you to search for posts by location using the geo location data of the post's taxonomy terms.
 
 ## Usage
 Visit the Taxonomies tab under the GEO my WP Settings admin page to set defaults and specify which taxonomies should get an address field.
@@ -16,7 +16,7 @@ Create a Posts by Taxonomy Locator form under the GEO my WP Forms admin page and
 This plugin uses the [GitHub Updater](https://github.com/afragen/github-updater) updater for updates.  If you'd like to keep the plugin updated, [download and install the latest tagged release](https://github.com/afragen/github-updater/releases).
 
 ## Support
-Extremely limited. I'm [involved](https://www.crypteron.com) [in](http://www.meetup.com/Advanced-WordPress/) [a](http://www.trestian.com) [lot](https://www.facebook.com/achordingtousimprov) [of](http://rotby.com) [projects](http://royalheartmusic.com)!  Pull requests welcome :-)
+Post support requests under [Issues](https://github.com/yaronguez/gmw-taxonomy/issues). Keep in mind that I'm [involved](https://www.crypteron.com) [in](http://www.meetup.com/Advanced-WordPress/) [a](http://www.trestian.com) [lot](https://www.facebook.com/achordingtousimprov) [of](http://rotby.com) [projects](http://royalheartmusic.com)!  Pull requests welcome :-)
 
 ## Disclaimer
 Geo My WordPress was created by [Eyal Fitoussi](https://geomywp.com/).  This GMW Taxonomy plugin merely extends that one as an addon.  Eyal was very helpful in this plugin's development.  This is the first version of the plugin and it may have bugs and other oddities.  It is released as is with no liability.
