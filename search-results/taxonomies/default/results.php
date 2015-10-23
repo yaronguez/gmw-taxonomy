@@ -134,6 +134,7 @@
 		    				</div>
 		    			<?php } ?>
 
+
                     </div><!-- info right -->
 
                 </div> <!-- info -->

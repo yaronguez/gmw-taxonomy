@@ -125,10 +125,7 @@
 		    				</div>
 		    			<?php } ?>
 			    		
-                        <!-- Purchase from Vendor -->
-							<div class="wppl-buy-from-vendor">
-		    					<a class="vendor-purchase" href="#buyFROMvendor">Buy from This Vendor</a>
-		    				</div>
+
 		    		</div><!-- info right end -->
 		    	
 		    	</div> <!-- info end -->
