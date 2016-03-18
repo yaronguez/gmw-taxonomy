@@ -35,11 +35,8 @@ class GMW_TX_Meta_Boxes {
 
         }
 
-        // add_action( 'save_post',  				 		array( $this, 'save_data' 							) );
-         add_action( 'admin_print_scripts-edit-tags.php', array( $this, 'register_admin_location_scripts' ), 11 );
-
-
-
+        add_action( 'admin_print_scripts-edit-tags.php', array( $this, 'register_admin_location_scripts' ), 11 ); // WP < 4.5
+        add_action( 'admin_print_scripts-term.php', array( $this, 'register_admin_location_scripts' ), 11 );  // WP >= 4.5
     }
 
     /**
