@@ -29,10 +29,7 @@ class GMW_TX_Admin {
      * Add Address meta boxes to taxonomy pages
      */
     public function init_metaboxes(){
-        //check if we are in new/edit taxonomy page
-        if ( in_array( basename( $_SERVER['PHP_SELF'] ), array( 'edit-tags.php','term.php') ) ) {
-            include_once GMW_TX_PATH . 'includes/admin/gmw-tx-metaboxes.php';
-        }
+		include_once GMW_TX_PATH . 'includes/admin/gmw-tx-metaboxes.php';
     }
 
     /**

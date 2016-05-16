@@ -653,11 +653,14 @@ class GMW_TX_Meta_Boxes {
             $_POST['gmw_map_icon']  = ( isset( $_POST['gmw_map_icon'] ) && !empty( $_POST['gmw_map_icon'] ) ) ? $_POST['gmw_map_icon'] : '_default.png';
             $_POST 					= apply_filters( 'gmw_tx_before_location_updated', $_POST, $tt_id );
 
+            // Fetch term from DB
+            $term = get_term($term_id);
+
             //update DB
-            $wpdb->replace($wpdb->prefix . 'taxonomy_locator', array(
+            $result = $wpdb->replace($wpdb->prefix . 'taxonomy_locator', array(
                 'term_taxonomy_id'           => $tt_id,
-                'name'        => $_POST['name'],
-                'description'       => $_POST['description'],
+                'name'        => $term->name,
+                'description'       => $term->description,
                 'street_number'     => $_POST['_wppl_street_name'],
                 'street_name'       => $_POST['_wppl_street_number'],
                 'street'            => $_POST['_wppl_street'],
