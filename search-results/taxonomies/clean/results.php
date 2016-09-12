@@ -62,6 +62,7 @@
                             title="<?php echo $taxonomy_term->name; ?>">
                             <?php echo $taxonomy_term->name; ?>
                         </a>
+						<?php do_action('gmw_search_results_after_title', $gmw, $taxonomy_term); ?>
 						<span class="radius-dis">(<?php gmw_distance_to_location( $taxonomy_term, $gmw ); ?>)</span>
 					</h2>
 				</div>
