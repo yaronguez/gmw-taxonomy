@@ -251,7 +251,7 @@ class GMW_PT_TX_Search_Query extends GMW {
     			'units'	    => $this->form['units_array']['name']
     	);
 
-    	return apply_filters( 'gmw_pt_post_permalink', $url. '?'.http_build_query( $url_args ), $url, $url_args );
+    	return apply_filters( 'gmw_pt_tx_post_permalink', $url. '?'.http_build_query( $url_args ), $url, $url_args );
     }
    
     /**
