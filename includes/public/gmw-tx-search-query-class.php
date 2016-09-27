@@ -317,6 +317,7 @@ class GMW_TX_Search_Query extends GMW {
         $taxonomy_term->post_count     	   = $this->form['post_count'];
         $taxonomy_term->mapIcon        	   = apply_filters( 'gmw_tx_map_icon', 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld='.$taxonomy_term->post_count.'|FF776B|000000', $taxonomy_term, $this->form );
         $taxonomy_term->info_window_content = self::info_window_content( $taxonomy_term );
+	    $taxonomy_term->ID = $taxonomy_term->term_taxonomy_id;
 
         $this->form['post_count']++;
 
