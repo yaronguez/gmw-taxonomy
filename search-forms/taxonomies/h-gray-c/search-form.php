@@ -55,10 +55,12 @@ if ( !function_exists('gmw_modify_tax_all_value') ) {
 		</div>
 
 		<?php do_action( 'gmw_search_form_before_post_types', $gmw ); ?>
-				
+
 		<!-- post types dropdown -->
 		<?php gmw_pt_form_post_types_dropdown( $gmw, false, false, false ); ?>
-        				            				
+
+		<?php do_action( 'gmw_search_form_before_distance', $gmw ); ?>
+
 		<!--distance values -->
 		<?php gmw_search_form_radius_values( $gmw, $class='' ); ?>
 			
