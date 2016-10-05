@@ -60,7 +60,7 @@ class GMW_TX_Search_Query extends GMW {
 
         } else {
         	//if showing posts without location
-        	if ( $this->enable_non_located_posts ) {
+        	if (isset($this->enable_non_located_posts) && $this->enable_non_located_posts ) {
         		// left join the location table into the query to display posts with no location as well
         		$clauses['join']  .= " LEFT JOIN {$wpdb->prefix}places_locator gmwlocations ON $wpdb->term_taxonomy.term_taxonomy_id = gmwlocations.term_taxonomy_id ";
         		$clauses['where'] .= " ";
