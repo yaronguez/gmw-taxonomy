@@ -71,6 +71,7 @@ class GMW_Taxonomy {
             include_once GMW_TX_PATH . 'includes/admin/gmw-tx-admin.php';
     	} else {
             include_once GMW_TX_PATH . 'includes/public/gmw-tx-public.php';
+		    include_once GMW_TX_PATH . 'includes/public/gmw-tx-shortcodes.php';
         }
 
         //registter scripts

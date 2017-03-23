@@ -13,6 +13,7 @@ class GMW_TX_Public {
     public function __construct() {
         $this->init_search_queries();
         $this->init_template_functions();
+        $this->init_functions();
 
         // Load templates for output on front end
         add_filter('gmw_search_forms_folder', array($this, 'search_forms'),1, 1);
@@ -36,6 +37,11 @@ class GMW_TX_Public {
     public function init_template_functions(){
         include_once GMW_TX_PATH . 'includes/public/gmw-tx-template-functions.php';
     }
+
+	public function init_functions(){
+		include_once GMW_TX_PATH . 'includes/public/gmw-tx-functions.php';
+	}
+
     public function search_forms($folders){
         if ( GEO_my_WP::gmw_check_addon( 'taxonomies' ) != false ) {
             $folders['tx'] =  array(
