@@ -3,7 +3,7 @@
 Plugin Name: GMW Add-on - Taxonomy Locator
 Plugin URI: http://www.trestian.com
 Description: Add geo-location to a taxonomy, search taxonomies by location and filter results by post
-Version: 1.0.13
+Version: 1.0.14
 Author URI: http://www.trestian.com
 Requires at least: 4.0
 Tested up to: 4.3
@@ -56,8 +56,6 @@ class GMW_Taxonomy {
         if ( !GEO_my_WP::gmw_check_addon( 'taxonomies' ) ) {
             return;
         }
-
-        include(GMW_TX_PATH.'includes/kint/Kint.class.php');
 
     	//include files
     	//include_once( 'includes/gmw-ps-template-functions.php' );
